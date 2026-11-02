@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Emprender en desventaja: el campo que alimenta a Colombia | Raíces que Emprenden</title>
+  <meta name="description" content="Entrada 2: problemática, contexto con mapa, objetivos, justificación y referencias del proyecto sobre emprendimiento por necesidad y brecha campo–ciudad en Colombia.">
+  <link rel="icon" href="assets/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/leaflet.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="marca" href="index.html"><img class="marca-logo" src="assets/img/logo.svg" alt=""><span class="marca-nombre">Raíces que Emprenden</span></a>
+    <nav class="nav" aria-label="Principal">
+      <a href="index.html">Inicio</a>
+      <a href="entrada-1.html">Entrada 1</a>
+      <a href="entrada-2.html" aria-current="page">Entrada 2</a>
+    </nav>
+  </div>
+</header>
+
+<header class="post-header">
+  <span class="eyebrow">Entrada 2 · Problemática y contexto</span>
+  <h1>Emprender en desventaja: el campo que alimenta a Colombia</h1>
+  <p class="subtitulo">Quien siembra la comida del país es también quien emprende con más pobreza, más informalidad y menos acceso a compradores. ¿Qué podemos hacer desde la ciudad?</p>
+  <p class="meta">Por Jonathan Salas · Proyecto de Humanidades Digitales · UNIMINUTO · Noviembre de 2026 · Lectura de 8 minutos</p>
+</header>
+
+<div class="portada-entrada">
+  <figure>
+    <img src="assets/img/portada-entrada2.svg" alt="Ilustración de una familia campesina cosechando en las montañas, con un camino que lleva a la ciudad al fondo">
+    <figcaption>Ilustración propia: el camino entre el campo y la ciudad es corto en el mapa, pero largo en oportunidades.</figcaption>
+  </figure>
+</div>
+
+<main class="contenido">
+
+  <nav class="indice" aria-label="Contenido de la entrada">
+    <strong>En esta entrada</strong>
+    <ol>
+      <li><a href="#problematica">La problemática</a></li>
+      <li><a href="#contexto">Contexto: dos Colombias</a></li>
+      <li><a href="#mapa-sec">El territorio en el mapa</a></li>
+      <li><a href="#iniciativas">Quiénes ya están actuando</a></li>
+      <li><a href="#objetivos">Objetivos</a></li>
+      <li><a href="#justificacion">Justificación</a></li>
+      <li><a href="#referencias">Referencias</a></li>
+    </ol>
+  </nav>
+
+  <p>En la <a href="entrada-1.html">primera entrada</a> vimos que en Colombia mucha gente emprende porque no tiene otra opción, y que más de la mitad de los trabajadores son informales. Ahora vamos a mirar a quienes viven esa realidad en las condiciones más duras: los emprendedores del campo.</p>
+
+  <h2 id="problematica"><span class="num">1</span>La problemática</h2>
+
+  <div class="nota tierra">
+    <b class="titulo">Planteamiento</b>
+    Los emprendedores por necesidad en Colombia, y en especial los campesinos y pequeños productores rurales, trabajan con más pobreza e informalidad que el resto del país. Aunque producen buena parte de los alimentos que consumimos, reciben una porción mínima de lo que paga el comprador final, porque dependen de cadenas largas de intermediarios y son casi invisibles para los consumidores urbanos que podrían comprarles directamente.
+  </div>
+
+  <p>Dicho de forma sencilla: el problema no es que el campo no produzca, sino que <strong>la riqueza que genera no se queda en el campo</strong>. Y del otro lado, en la ciudad, muchas personas que sí podrían pagar un precio justo no saben a quién comprarle, ni conocen la desigualdad que hay detrás de su mercado.</p>
+
+  <h2 id="contexto"><span class="num">2</span>Contexto: dos Colombias</h2>
+  <p>El territorio de este proyecto es <strong>Colombia en su conjunto</strong>, porque el problema es nacional, con una mirada especial en la <strong>Colombia rural</strong>: los centros poblados y las zonas rurales dispersas donde viven millones de familias campesinas. Las cifras oficiales muestran que vivir en el campo multiplica las desventajas:</p>
+
+  <div class="cifras">
+    <div class="cifra campo"><div class="valor">1,6×</div><div class="etiqueta">más pobreza monetaria en el campo que en las cabeceras (39,5% frente a 24,6%)</div><div class="fuente">DANE, Pobreza monetaria 2025</div></div>
+    <div class="cifra campo"><div class="valor">2,8×</div><div class="etiqueta">más pobreza extrema en el campo (19,1% frente a 6,9%)</div><div class="fuente">DANE, Pobreza monetaria 2025</div></div>
+    <div class="cifra campo"><div class="valor">3,6×</div><div class="etiqueta">más pobreza multidimensional en el campo (22,4% frente a 6,3%)</div><div class="fuente">DANE, Pobreza multidimensional 2025</div></div>
+  </div>
+
+  <div class="grafico">
+    <h4>La brecha campo–ciudad en cuatro indicadores</h4>
+    <p class="bajada">Porcentaje de la población (pobreza) o de las personas ocupadas (informalidad).</p>
+    <div class="leyenda"><span class="l-ciudad">Ciudad</span><span class="l-campo">Campo</span></div>
+    <div class="lienzo"><canvas id="g-brecha" aria-label="Gráfico de barras: pobreza monetaria ciudad 24,6% campo 39,5%; pobreza extrema 6,9% y 19,1%; pobreza multidimensional 6,3% y 22,4%; informalidad 40,7% y 83,1%"></canvas></div>
+    <p class="fuente">Fuentes: DANE, Pobreza monetaria 2025 y Pobreza multidimensional 2025 (ciudad = cabeceras municipales); DANE, GEIH junio–agosto 2026 para informalidad (ciudad = 13 ciudades y áreas metropolitanas). Campo = centros poblados y rural disperso.</p>
+  </div>
+
+  <p>La pobreza multidimensional mide carencias concretas (educación, salud, vivienda, servicios, empleo), no solo ingresos. Que en el campo sea 3,6 veces mayor significa que el emprendedor rural no solo gana menos: también tiene peores vías para sacar su producto, menos acceso a internet y menos servicios para su familia.</p>
+
+  <div class="dos-col amplio" style="max-width:1000px">
+    <div class="grafico">
+      <h4>¿Dónde viven las personas pobres?</h4>
+      <p class="bajada">14,4 millones de personas en pobreza monetaria, 2025.</p>
+      <div class="lienzo bajo"><canvas id="g-pobres" aria-label="Gráfico de dona: 9,8 millones en ciudades y cabeceras, 4,6 millones en el campo"></canvas></div>
+      <p class="fuente">Fuente: DANE, Pobreza monetaria 2025. Aproximadamente 1 de cada 3 personas pobres vive en el campo, aunque allí vive una parte mucho menor de la población.</p>
+    </div>
+    <div class="grafico">
+      <h4>¿Cuánto le llega al campesino?</h4>
+      <p class="bajada">De cada $100 que paga el consumidor final, el productor puede recibir apenas entre $5 y $10.</p>
+      <div class="precio">
+        <div class="barra"><div class="p-campesino">5–10%</div><div class="p-inter">Entre 6 y 12 intermediarios se quedan con el resto</div></div>
+        <div class="rotulos"><span>Productor</span><span>Transporte, acopio, mayoristas, tiendas…</span></div>
+      </div>
+      <p style="font-size:.9rem;color:#6b655c;margin:10px 0 0">Por eso las iniciativas de venta directa son tan importantes: cada intermediario que se salta deja más dinero en manos de quien produce y, a veces, un mejor precio para quien compra.</p>
+      <p class="fuente">Fuente: estimaciones de estudios citados por BBC News Mundo (2020). Varía según el producto.</p>
+    </div>
+  </div>
+
+  <p>A esto se suma la informalidad: más de 8 de cada 10 trabajadores rurales son informales, y en el campo el 40,2% de los micronegocios nació porque su dueño no tenía otra alternativa de ingresos (DANE, 2025). El resultado es un emprendedor que produce, pero que no tiene crédito, ni seguridad social, ni poder de negociación frente a quien le compra.</p>
+
+  <p class="destacado">El campo no es pobre porque no trabaje. Es pobre porque vende barato, compra caro y está lejos de quien podría pagarle lo justo.</p>
+
+  <h2 id="mapa-sec"><span class="num">3</span>El territorio en el mapa</h2>
+  <p>El mapa no muestra un solo pueblo. Muestra puntos que ayudan a entender el problema y las respuestas que ya existen: lugares con las cifras más críticas y lugares donde nacieron iniciativas para conectar el campo con la ciudad. Haz clic en cada punto para leer más.</p>
+
+  <div class="mapa-wrap amplio" style="max-width:1000px">
+    <div id="mapa" role="region" aria-label="Mapa de Colombia con iniciativas de venta directa y datos de pobreza e informalidad"></div>
+    <div class="pie">
+      <span style="color:#2f6a4f;font-weight:700">●</span> Iniciativas de comercialización directa &nbsp;
+      <span style="color:#a2357a;font-weight:700">●</span> Creadores de contenido del campo &nbsp;
+      <span style="color:#9a4a2a;font-weight:700">●</span> Datos críticos (DANE) · Mapa base: © OpenStreetMap, © CARTO
+    </div>
+  </div>
+
+  <h2 id="iniciativas"><span class="num">4</span>Quiénes ya están actuando</h2>
+  <p>La buena noticia es que este problema ya tiene respuestas en marcha: desde el Estado, la academia, las ONG y hasta las redes sociales. Conocerlas ayuda a justificar el proyecto y también a saber hacia dónde dirigir a la audiencia: <strong>no hay que inventar un canal nuevo, sino llevar más compradores a los que ya funcionan</strong>.</p>
+
+  <div class="tarjetas amplio" style="max-width:1000px">
+    <div class="tarjeta">
+      <span class="tipo">Minuto de Dios · Economía solidaria</span>
+      <h4>Mercados Solidarios MD</h4>
+      <p>Plataforma web y app de la Gerencia de Desarrollo Rural Sostenible del Minuto de Dios. Lleva a los hogares productos agroecológicos de familias campesinas, con menos intermediarios y mejor precio para el productor.</p>
+      <div class="dato">El aliado más cercano a la responsabilidad social de UNIMINUTO.</div>
+    </div>
+    <div class="tarjeta">
+      <span class="tipo gob">Gobierno nacional</span>
+      <h4>Agricultura por Contrato</h4>
+      <p>Programa del Ministerio de Agricultura para que los productores vendan su cosecha por anticipado y sin intermediarios a la industria y a las grandes superficies. En octubre de 2026 el Ministerio anunció un acuerdo con el Grupo Éxito para hacer compras directas a campesinos.</p>
+      <div class="dato">Más de 241.000 productores vinculados en 2021.</div>
+    </div>
+    <div class="tarjeta">
+      <span class="tipo gob">Gobierno local</span>
+      <h4>Mercados Campesinos (Bogotá y Medellín)</h4>
+      <p>Espacios de venta directa en barrios y parques. Bogotá proyecta más de 17.000 espacios de comercialización en dos años; Medellín lleva más de tres décadas conectando a sus corregimientos con la ciudad.</p>
+      <div class="dato">Venta directa, sin intermediarios.</div>
+    </div>
+    <div class="tarjeta">
+      <span class="tipo red">Redes sociales</span>
+      <h4>Soy Campesino</h4>
+      <p>Medio digital creado por un trabajador social en el altiplano cundiboyacense. Viraliza a campesinos y artesanos para que vendan sus cosechas directamente y enseña a usar WhatsApp, redes y pagos digitales.</p>
+      <div class="dato">Ejemplo de humanidades digitales en acción.</div>
+    </div>
+    <div class="tarjeta">
+      <span class="tipo red">Influencers del campo</span>
+      <h4>Nubia e Hijos, La Chuchuqueñita, La Granja del Borrego</h4>
+      <p>Creadores campesinos que muestran la vida rural en TikTok, YouTube e Instagram. Han cambiado la imagen del campo entre los jóvenes y le han dado voz a una realidad que solía ser invisible.</p>
+      <div class="dato">Millones de seguidores que demuestran el interés del público urbano.</div>
+    </div>
+    <div class="tarjeta">
+      <span class="tipo">Emprendimiento rural</span>
+      <h4>Comproagro</h4>
+      <p>Plataforma creada en Toca (Boyacá) que funciona como una plaza de mercado en línea: los productores publican sus cosechas y los compradores los contactan sin pasar por intermediarios.</p>
+      <div class="dato">Una solución nacida en el propio campo.</div>
+    </div>
+    <div class="tarjeta">
+      <span class="tipo ong">ONG y microfinanzas</span>
+      <h4>Empropaz (Bancamía y aliados)</h4>
+      <p>Programa de inclusión financiera y capacitación para emprendedores rurales en zonas afectadas por la violencia y la pobreza, con la Fundación Microfinanzas BBVA y la Corporación Mundial de la Mujer.</p>
+      <div class="dato">56.500 emprendedores rurales en 76 municipios en sus dos primeros años.</div>
+    </div>
+    <div class="tarjeta">
+      <span class="tipo gob">Fondo público</span>
+      <h4>Fondo Emprender (SENA)</h4>
+      <p>Capital semilla para emprendedores. En 2026 abrió convocatorias específicas para mujeres, jóvenes, víctimas del conflicto y población vulnerable.</p>
+      <div class="dato">$19.000 millones para víctimas y población vulnerable en 2026.</div>
+    </div>
+  </div>
+
+  <h2 id="objetivos"><span class="num">5</span>Objetivos</h2>
+
+  <div class="objetivo-general">
+    <small>Objetivo general</small>
+    <p>Sensibilizar a consumidores urbanos con capacidad de compra sobre la desigualdad que enfrentan los emprendimientos por necesidad en Colombia, en especial los campesinos, mediante una estrategia de humanidades digitales que promueva la compra directa y el consumo consciente durante el periodo académico 2026-2.</p>
+  </div>
+
+  <h3>Objetivos específicos</h3>
+  <ol class="linea-tiempo">
+    <li><span class="n">1</span><span class="etapa">Ver · Entender</span><b>Caracterizar el problema</b><p>Analizar la informalidad, el emprendimiento por necesidad y la brecha campo–ciudad en Colombia con fuentes oficiales y académicas, y sintetizar los hallazgos en el blog. <em>Meta: 2 entradas publicadas con datos verificables.</em></p></li>
+    <li><span class="n">2</span><span class="etapa">Juzgar · Analizar</span><b>Mapear las iniciativas existentes</b><p>Identificar al menos 8 iniciativas públicas, privadas, sociales y digitales que conectan a los emprendedores, en especial a los campesinos, con compradores urbanos. <em>Meta: mapa y directorio publicados.</em></p></li>
+    <li><span class="n">3</span><span class="etapa">Actuar · Crear</span><b>Diseñar y difundir contenidos</b><p>Publicar 6 piezas en una cuenta de Instagram o Facebook, realizar un webinar y entrevistar a un emprendedor con experiencia que conozca de primera mano el emprendimiento por necesidad. <em>Meta: alcance, interacciones y asistentes medidos.</em></p></li>
+    <li><span class="n">4</span><span class="etapa">Evaluar · Mejorar</span><b>Medir el cambio en la audiencia</b><p>Aplicar una encuesta en línea antes y después de la campaña para medir el conocimiento del problema y la intención de comprar directamente a pequeños productores. <em>Meta: comparar los resultados antes y después.</em></p></li>
+  </ol>
+
+  <h2 id="justificacion"><span class="num">6</span>Justificación</h2>
+  <p>Este proyecto se justifica porque ataca un problema grande, documentado y cercano: más de la mitad del país trabaja en la informalidad (DANE, 2026a), cuatro de cada diez micronegocios rurales nacen por necesidad (DANE, 2025) y en el campo la pobreza multidimensional es 3,6 veces la de las ciudades. Además, se apoya en algo que hoy tienen casi todos: un teléfono y una red social. Esto lo justifica en tres sentidos:</p>
+
+  <div class="justif amplio" style="max-width:1000px">
+    <div class="tarjeta">
+      <span class="ico">🎓</span>
+      <h4>Académico</h4>
+      <p>Aplica la metodología praxeológica de UNIMINUTO (ver, juzgar, actuar) y las primeras etapas de la <em>Ruta de Innovación Social</em> (Pacheco Duarte et al., 2022): entender el territorio, analizar a los involucrados y construir una teoría del cambio. También integra varias disciplinas, como proponen Reyna Cruz et al. (2019), para explicar un problema que no es solo económico.</p>
+    </div>
+    <div class="tarjeta">
+      <span class="ico">🔬</span>
+      <h4>Científico</h4>
+      <p>Cada afirmación se basa en datos verificables: GEIH, EMICRON y mediciones de pobreza del DANE, el estudio de supervivencia empresarial de Confecámaras y el <em>Panorama Social</em> de la CEPAL. La encuesta antes y después permite medir si la estrategia cambia algo, en lugar de suponerlo.</p>
+    </div>
+    <div class="tarjeta">
+      <span class="ico">🤝</span>
+      <h4>Social</h4>
+      <p>Convierte la información en acción: lleva compradores hacia canales que ya pagan mejor al productor, visibiliza a quienes emprenden por necesidad y promueve una economía solidaria en la que comprar también es una forma de apoyar.</p>
+    </div>
+  </div>
+
+  <h3>¿Qué aporta a la comunidad?</h3>
+  <ul>
+    <li><strong>A los emprendedores y campesinos:</strong> más visibilidad y más compradores dirigidos a sus canales de venta directa, sin que tengan que invertir en publicidad.</li>
+    <li><strong>A los consumidores urbanos:</strong> información clara para decidir mejor dónde comprar, con un directorio de iniciativas confiables.</li>
+    <li><strong>A la universidad:</strong> un ejemplo de responsabilidad social universitaria que conecta la academia con un problema real del país y con iniciativas del propio Minuto de Dios.</li>
+  </ul>
+
+  <h3>Teoría del cambio del proyecto</h3>
+  <p>Siguiendo la cadena de resultados que propone la Ruta de Innovación Social, así se conecta lo que hacemos con el cambio que buscamos:</p>
+  <div class="tdc amplio" style="max-width:1000px">
+    <div><b>Insumos</b>Datos abiertos, lecturas, herramientas digitales gratuitas y la experiencia de un emprendedor</div>
+    <div><b>Actividades</b>Blog, 6 publicaciones, webinar, entrevista y encuesta</div>
+    <div><b>Productos</b>Audiencia informada y directorio de iniciativas de compra directa</div>
+    <div><b>Efectos</b>Más personas que eligen comprar directo y con conciencia</div>
+    <div><b>Impacto</b>Mejores ingresos para quienes emprenden por necesidad y una brecha campo–ciudad más pequeña (ODS 1, 2, 8, 10 y 12)</div>
+  </div>
+
+  <div class="nota">
+    <b class="titulo">Alcance y límites</b>
+    El proyecto es 100% virtual: no incluye trabajo de campo ni contacto directo con productores. Por eso no reemplaza a las organizaciones que trabajan en el territorio; las complementa, dirigiendo a la audiencia hacia canales que ya existen y respetando la voz de quienes viven el problema.
+  </div>
+
+  <h2 id="referencias"><span class="num">✎</span>Referencias</h2>
+  <div class="referencias">
+    <p>Alcaldía Mayor de Bogotá. (2026). <em>Los Mercados Campesinos de Bogotá, más que espacios de conexión con lo rural</em>. https://bogota.gov.co/mi-ciudad/desarrollo-economico/mercados-campesinos-de-bogota-espacios-de-conexion-rural-2026</p>
+    <p>BBC News Mundo. (2020). Nubia e hijos: la entrañable familia de campesinos colombianos que conquistó YouTube en plena pandemia de coronavirus. <em>Prensa Libre</em>. https://www.prensalibre.com/?p=6278322</p>
+    <p>Canal Trece. (s.&nbsp;f.). <em>La vida del campesino, siete documentales para ver en YouTube</em>. https://canaltrece.com.co/noticias/documentales-campesinos-colombia-youtube/</p>
+    <p>Comisión Económica para América Latina y el Caribe [CEPAL]. (2025). <em>Panorama Social de América Latina y el Caribe 2025</em>. Naciones Unidas. https://www.cepal.org/es/tipo-de-publicacion/panorama-social-america-latina-caribe</p>
+    <p>Confederación Colombiana de Cámaras de Comercio [Confecámaras]. (2023). <em>La supervivencia empresarial en Colombia</em>. Confecámaras.</p>
+    <p>Contexto Ganadero. (2020, 30 de octubre). <em>Mercados solidarios MD busca fortalecer la agricultura familiar y comunitaria</em>. https://www.contextoganadero.com/agricultura/mercados-solidarios-md-busca-fortalecer-la-agricultura-familiar-y-comunitaria</p>
+    <p>Departamento Administrativo Nacional de Estadística [DANE]. (2025). <em>Encuesta de Micronegocios (EMICRON): año 2024</em> [Presentación de resultados]. https://www.dane.gov.co/files/operaciones/EMICRON/pres-EMICRON-2024.pdf</p>
+    <p>Departamento Administrativo Nacional de Estadística [DANE]. (2026a). <em>Gran Encuesta Integrada de Hogares (GEIH): empleo informal y seguridad social. Trimestre móvil junio–agosto 2026</em> [Boletín técnico]. https://www.dane.gov.co/files/operaciones/GEIH/bol-GEIHEISS-jun-ago2026.pdf</p>
+    <p>Departamento Administrativo Nacional de Estadística [DANE]. (2026b). <em>Pobreza monetaria en Colombia: año 2025</em> [Boletín técnico]. https://www.dane.gov.co/files/operaciones/PM/bol-PM-2025.pdf</p>
+    <p>El Colombiano. (2026, 14 de abril). <em>Pobreza multidimensional en Colombia cayó al 9,9% en 2025, según el Dane</em>. https://www.elcolombiano.com/negocios/pobreza-multidimensional-colombia-2025-dane-resultado-NF35477219</p>
+    <p>El Espectador. (2021). <em>En 2021 ventas del programa «Agricultura por contrato» fueron cerca de $1,6 billones</em>. https://www.elespectador.com/economia/en-2021-ventas-del-programa-agricultura-por-contrato-fueron-de-16-billones/</p>
+    <p>El Tiempo. (s.&nbsp;f.). <em>Soy Campesino, la página que viraliza a campesinos colombianos</em>. https://www.eltiempo.com/colombia/otras-ciudades/soy-campesino-la-pagina-que-viraliza-a-campesinos-colombianos-650386</p>
+    <p>Pacheco Duarte, J. F., et al. (2022). <em>Ruta de Innovación Social: paso a paso para desarrollar innovaciones sociales</em> (Documento Técnico 02). Corporación Universitaria Minuto de Dios – UNIMINUTO.</p>
+    <p>Radio Nacional de Colombia. (s.&nbsp;f.). <em>Día del campesino: influenciadores del campo colombiano</em>. https://radionacional.co/actualidad/campo-colombiano/dia-del-campesino-influenciadores-del-campo-colombiano</p>
+    <p>Reyna Cruz, W. E., Carreón Corona, A. L., &amp; Armijo Mena, S. G. (2019). La interrelación de diferentes disciplinas para el abordaje científico de fenómenos y problemas sociales. <em>Revista Latinoamericana de Metodología de las Ciencias Sociales, 9</em>(2), e056. https://doi.org/10.24215/18537863e056</p>
+    <p>Semana. (s.&nbsp;f.). <em>Empropaz, el programa que apoyará a 116.000 emprendedores rurales</em>. https://www.semana.com/programas-de-apoyo-para-emprendedores-rurales-en-colombia/305754/</p>
+    <p>Tiendanube. (2026). <em>Fondo Emprender SENA 2026: qué es, cómo funciona y convocatorias</em>. https://www.tiendanube.com/co/blog/fondo-emprender/</p>
+    <p>Vanguardia. (2026, 18 de octubre). <em>Minagricultura y Éxito cerraron acuerdo para compra directa a campesinos</em>. https://www.vanguardia.com/colombia/2026/10/18/minagricultura-y-exito-cerraron-acuerdo-para-compra-directa-a-campesinos/</p>
+  </div>
+
+  <div class="siguiente">
+    <a href="entrada-1.html">← Entrada 1: ¿Sueño o necesidad?</a>
+    <a href="index.html">Volver al inicio →</a>
+  </div>
+</main>
+
+<footer class="pie-sitio">
+  <div class="in">
+    <div><b>Raíces que Emprenden</b><br>Blog educativo · Proyecto de Humanidades Digitales<br>Práctica en Responsabilidad Social · UNIMINUTO · 2026</div>
+    <div>Autor: Jonathan<br>Gráficos y mapa interactivos: toca o pasa el cursor para ver cada dato.</div>
+  </div>
+</footer>
+
+<script src="assets/vendor/chart.umd.js"></script>
+<script src="assets/vendor/leaflet.js"></script>
+<script src="assets/js/graficos.js"></script>
+<script src="assets/js/mapa.js"></script>
+</body>
+</html>
