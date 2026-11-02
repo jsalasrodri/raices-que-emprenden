@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" role="img" aria-label="Ilustración: familia campesina cosechando en las montañas, con la ciudad a lo lejos">
+<defs><linearGradient id="c2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f6dcae"/><stop offset="1" stop-color="#fbf3e4"/></linearGradient></defs>
+<rect width="1200" height="520" fill="url(#c2)"/>
+<circle cx="220" cy="120" r="64" fill="#f2b84b"/>
+<g fill="#9fb3cf" opacity=".9"><rect x="980" y="200" width="26" height="70"/><rect x="1012" y="180" width="30" height="90"/><rect x="1048" y="210" width="22" height="60"/><rect x="1076" y="190" width="28" height="80"/><rect x="1110" y="215" width="24" height="55"/></g>
+<path d="M0 300 L160 180 L300 280 L460 150 L620 290 L760 200 L940 300 L1200 230 V520 H0Z" fill="#7fa88a"/>
+<path d="M0 360 L200 260 L380 340 L560 250 L760 350 L980 280 L1200 330 V520 H0Z" fill="#4f8a68"/>
+<path d="M0 420 Q300 360 600 400 T1200 380 V520 H0Z" fill="#2f6a4f"/>
+<g stroke="#9fd1b0" stroke-width="4" opacity=".55" fill="none"><path d="M0 450 Q300 392 600 432"/><path d="M0 478 Q300 420 600 460"/><path d="M0 506 Q300 448 600 488"/><path d="M600 432 Q900 400 1200 410"/><path d="M600 460 Q900 428 1200 438"/></g>
+<path d="M640 520 C760 440 900 380 1030 290" stroke="#e8c48a" stroke-width="22" fill="none" stroke-linecap="round"/>
+<g transform="translate(360 380)"><circle cx="0" cy="-60" r="15" fill="#9a4a2a"/><path d="M-24 -76 h48 l-8 -10 h-32z" fill="#d99a1e"/><rect x="-15" y="-44" width="30" height="44" rx="9" fill="#d99a1e"/><rect x="-12" y="0" width="10" height="34" fill="#23201b"/><rect x="2" y="0" width="10" height="34" fill="#23201b"/><path d="M15 -34 l30 18" stroke="#9a4a2a" stroke-width="8" stroke-linecap="round"/><path d="M38 -26 q20 -6 34 8 l-6 30 h-34z" fill="#9a4a2a"/><circle cx="48" cy="-16" r="7" fill="#e0533d"/><circle cx="60" cy="-20" r="7" fill="#7fbf5a"/></g>
+<g transform="translate(470 392)"><circle cx="0" cy="-46" r="12" fill="#6b3a22"/><rect x="-12" y="-33" width="24" height="34" rx="8" fill="#e0533d"/><rect x="-10" y="1" width="8" height="26" fill="#23201b"/><rect x="2" y="1" width="8" height="26" fill="#23201b"/><path d="M-12 -24 l-18 14" stroke="#6b3a22" stroke-width="6" stroke-linecap="round"/></g>
+<g fill="#7fbf5a"><circle cx="560" cy="412" r="10"/><circle cx="590" cy="418" r="10"/><circle cx="620" cy="410" r="10"/><circle cx="240" cy="424" r="10"/><circle cx="270" cy="430" r="10"/><circle cx="200" cy="432" r="10"/></g>
+</svg>
