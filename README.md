@@ -9,5 +9,5 @@ Blog del Proyecto de Humanidades Digitales (Práctica en Responsabilidad Social,
 - `assets/css/styles.css`: estilos (colores en `:root`)
 - `assets/js/graficos.js`: datos de los gráficos (edita los arreglos `data`)
 - `assets/js/mapa.js`: puntos del mapa (edita el arreglo `puntos`)
-- `assets/img/`: ilustraciones; puedes reemplazarlas por fotos con el mismo nombre o cambiar el `src`
+- `assets/img/`: ilustraciones
 
